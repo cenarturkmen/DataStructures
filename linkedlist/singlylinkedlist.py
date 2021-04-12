@@ -130,7 +130,7 @@ class LinkedList:
 
 
 
-llist = LinkedList()
+"""llist = LinkedList()
 print("length: ",llist.length())
 llist.head = Node(1)
 second = Node(2)
@@ -149,7 +149,7 @@ print("length: ",llist.length())
 llist.printList()
 llist.reverse()
 llist.printList()
-
+"""
 
 
 
