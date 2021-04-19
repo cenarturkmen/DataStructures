@@ -117,6 +117,15 @@ class LinkedList:
             current = next
         self.head = prev
     
+    def reverseRecursive(self,head):
+        if head is None or head.next is None:
+            return head
+        
+        p = self.reverseRecursive(head.next)
+        head.next.next = head
+        head.next = None
+        return p
+
 
     # utility function 
     def printList(self):
@@ -149,8 +158,9 @@ print("length: ",llist.length())
 llist.printList()
 llist.reverse()
 llist.printList()
+llist.reverseRecursive(llist.head)
+llist.printList()
 """
-
 
 
 
