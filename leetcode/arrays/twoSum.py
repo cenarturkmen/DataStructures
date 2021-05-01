@@ -16,6 +16,7 @@ def twoSum(nums, target):
 def two_sum(nums, target):
     dic = {}
     for i, n in enumerate(nums):
+        print(i,n)
         desired = target - n
         if desired in dic:
             return [dic[desired], i]
