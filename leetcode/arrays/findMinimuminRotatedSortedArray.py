@@ -8,8 +8,8 @@ def findMin(nums):
     for i in range(len(nums)-1):
         if nums[i] > nums[i+1]:
             return nums[i+1]
-    else:
-        return nums[0]
+        else:
+            return nums[0]
 #o(logn)
 def findMin(self, nums):
         """
