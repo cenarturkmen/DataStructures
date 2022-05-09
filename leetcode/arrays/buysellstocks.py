@@ -15,7 +15,7 @@ def maxProfit(self, prices: List[int]) -> int:
 
 
 #o(n^2) time o(1) space complexity
-def maxProfit(self, p):
+def maxProfit(p):
         n = len(p)
         max_so_far = 0
 
@@ -24,3 +24,20 @@ def maxProfit(self, p):
                 max_so_far = max(max_so_far, p[j] - p[i])
 
         return max_so_far
+
+
+# sliding window solution o(n) time - o(1) space complexity
+def maxProfit3(prices):
+        
+    left = 0 
+    right = 0
+    maxprofit = 0
+        
+    while right < len(prices):
+        maxprofit = max(maxprofit, prices[right] - prices[left])
+        if (prices[left] > prices[right]):
+            left +=1
+        else:
+            right += 1
+            
+    return maxprofit
